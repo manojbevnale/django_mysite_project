@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block body %}
+<body style="background-color: aquamarine;">
+
+<section class="container mt-5">
+  <center><h1 class="container display-4" style="color: rgb(228, 90, 10);">About Me</h1></center>
+  <div class="container my-5">
+      <div class="row">
+        {% for about in abouts %}
+        <div class="col-md-6">
+          <img src="{{ about.image.url }}" class="img-fluid img-thumbnail" alt="image">
+        </div>
+        <div class="col-md-6" style="color: rgb(54, 59, 33);">
+          <h2 class='display-5' style="font-weight: 500; font-size:60px">{{ about.title }}</h2>
+          <p style="font-size: 25px; color:rgb(7, 85, 99)">{{ about.description }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  
+  
+{% endblock body %}

@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block body %}
+<body style="background-color: aquamarine;">
+  
+<div class="jumbotron jumbotron-fluid " style="background-color: rgb(236, 191, 40);">
+    <div class="container" style="color: white;">
+      <h1 class="display-1" style="color: rgb(33, 85, 109);"> <span style="color: rgb(226, 223, 221); font-weight:600">W</span>elcome
+         <span style="color: rgb(92, 137, 163); font-weight:600">T</span>o 
+         <span style="color: rgb(230, 226, 224); font-weight:600">M</span>ysite</h1>
+      <p class="display-4">This is my portfolio website</p>
+      <a href="/about" class="btn btn-dark btn-lg">More...</a>
+    </div>
+</div>
+
+
+<section class="container mt-5">
+  <center><h1 class="container display-4" style="color: rgb(228, 90, 10);">About Me</h1></center>
+  <div class="container my-5">
+      <div class="row">
+        {% for about in abouts %}
+        <div class="col-md-6">
+          <img src="{{ about.image.url }}" class="img-fluid img-thumbnail" alt="image">
+        </div>
+        <div class="col-md-6" style="color: rgb(54, 59, 33);">
+          <h2 class='display-5' style="font-weight: 500; font-size:60px">{{ about.title }}</h2>
+          <p style="font-size: 25px; color:rgb(7, 85, 99)">{{ about.description }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  
+
+
+
+<div class="container mt-3">
+  <h2 class="text-center display-4" style="color: rgb(240, 88, 28);">My Projects</h2>
+  <div class="row">
+    {% for service in services %}
+    <div class="col-md-4 mt-4">
+      <div class="card">
+        <img class="card-img-top img-thumbnail" src="{{ service.image.url }}" alt="{{ service.title }}">
+        <div class="card-body">
+          <h4 class="card-title">{{ service.title }}</h4>
+          <p class="card-text">{{ service.description }}</p>
+          <a href="/about" class="btn btn-dark btn-lg">More...</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+
+  
+{% endblock body %}

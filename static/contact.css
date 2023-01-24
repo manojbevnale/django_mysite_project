@@ -1,0 +1,39 @@
+body{
+ background-color: rgb(200, 241, 241);    
+}
+.form-label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(22, 21, 21);
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    border-radius: 0.25rem;
+    box-shadow: none;
+    border-color: #4175a8;
+    font-size: 1.2rem;
+    padding: 0.75rem 1rem;
+}
+
+.form-control:focus {
+    border-color: #c25004;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn {
+    background-color: #222221;
+    color: rgb(247, 243, 243);
+    font-size: 1.2rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    
+    background-color: #20aa20;
+}
+.h1{
+    color: #c25004;
+}

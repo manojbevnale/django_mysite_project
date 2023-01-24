@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block body %}
+<body style="background-color: rgb(203, 241, 241);">
+   
+
+<div class="container mt-3">
+  <h2 class="text-center display-4" style="color: rgb(240, 88, 28);">My Projects</h2>
+  <div class="row">
+    {% for service in services %}
+    <div class="col-md-4 mt-4">
+      <div class="card">
+        <img class="card-img-top img-thumbnail" src="{{ service.image.url }}" alt="{{ service.title }}">
+        <div class="card-body">
+          <h4 class="card-title">{{ service.title }}</h4>
+          <p class="card-text">{{ service.description }}</p>
+          <a href="/about" class="btn btn-dark btn-lg">More...</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+  
+</body>
+{% endblock body %}
